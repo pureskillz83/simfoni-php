@@ -1,0 +1,33 @@
+{
+    "name": "mblsolutions/simfoni-php",
+    "description": "Official Simfoni interface for PHP applications.",
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Redu Group",
+            "email": "tech@redu.co.uk"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "ext-json": "*",
+        "ext-openssl": "*",
+        "guzzlehttp/guzzle": "^6.0|^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MBLSolutions\\Simfoni\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MBLSolutions\\Simfoni\\Tests\\": "tests"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
