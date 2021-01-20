@@ -136,16 +136,8 @@ class OrderTest extends TestCase
         $base64Key = 'b1Nr/nNInIcZqb2AfNA6HHQi50K0pFi+5+5F0gm/s1E=';
         $encryptedString = 'eyJpdiI6InFiV0d1YnRCNmZYeGhkSGJSNlA4eHc9PSIsInZhbHVlIjoicUFDejBQWWEwa29jbno5b3ZyN0Ywdz09IiwibWFjIjoiNWM1ZjdjM2MxNTliNGNkNDcyMmUxMWI2NDhjYmNiOTc0ZTUzNmZlOGI2ZjVlZjNkY2I0ZTgwZTcyM2EzOTA5NSJ9';
 
-        self::assertEquals('test', unserialize($this->order->decrypt($base64Key, $encryptedString)));
-    }
-
-    /** @test */
-    public function can_decrypt_order_information_alternative(): void
-    {
-        $base64Key = 'b1Nr/nNInIcZqb2AfNA6HHQi50K0pFi+5+5F0gm/s1E=';
-        $encryptedString = 'eyJpdiI6InFiV0d1YnRCNmZYeGhkSGJSNlA4eHc9PSIsInZhbHVlIjoicUFDejBQWWEwa29jbno5b3ZyN0Ywdz09IiwibWFjIjoiNWM1ZjdjM2MxNTliNGNkNDcyMmUxMWI2NDhjYmNiOTc0ZTUzNmZlOGI2ZjVlZjNkY2I0ZTgwZTcyM2EzOTA5NSJ9';
-
         self::assertEquals('test', unserialize((new Decrypter($base64Key, $encryptedString))->decrypt()));
+
     }
 
 }

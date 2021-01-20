@@ -44,4 +44,17 @@ class Decrypter
         return openssl_decrypt($encryptObjectValue, $this->method, $key, 0, $iv);
     }
 
+    /**
+     * Static method for decryption service
+     *
+     * @param  string  $base64Key
+     * @param  string  $encryptedString
+     * @param  string  $method
+     * @return false|string
+     */
+    public static function static(string $base64Key, string $encryptedString, $method = 'AES-256-CBC')
+    {
+        return (new self($base64Key, $encryptedString, $method))->decrypt();
+    }
+
 }
