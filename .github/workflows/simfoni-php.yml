@@ -12,7 +12,6 @@ on:
       - master
       - feature/*
       - fix/*
-      - v*
 jobs:
   simfoni-php-tests:
     runs-on: ubuntu-18.04
