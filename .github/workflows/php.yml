@@ -2,9 +2,9 @@ name: PHP
 
 on:
   push:
-    branches: [ * ]
+    branches: [ feature/* ]
   pull_request:
-    branches: [ * ]
+    branches: [ feature/* ]
 
 jobs:
   php-tests:
