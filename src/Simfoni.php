@@ -18,8 +18,6 @@ class Simfoni
 
     /** @var string */
     public const AGENT = 'Simfoni-PHP';
-
-    /** @var string  */
     public const VERSION = '0.2.0';
 
     /**
@@ -48,7 +46,7 @@ class Simfoni
     /**
      * Set the Bearer Token
      *
-     * @param string $token
+     * @param  string  $token
      * @return void
      */
     public static function setToken(string $token)
@@ -74,9 +72,9 @@ class Simfoni
     }
 
     /**
-     * Set Verify SSL
+     * Set VerifyRequest SSL
      *
-     * @param bool $verify
+     * @param  bool  $verify
      * @return void
      */
     public static function setVerifySSL(bool $verify): void
@@ -85,7 +83,7 @@ class Simfoni
     }
 
     /**
-     * Get Verify SSL
+     * Get VerifyRequest SSL
      *
      * @return bool
      */
