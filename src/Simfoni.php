@@ -16,6 +16,9 @@ class Simfoni
     /** @var bool $verify */
     private static $verifySSL = true;
 
+    /** @var string $webhookSignature */
+    private static $webhookSignature;
+
     /** @var string */
     public const AGENT = 'Simfoni-PHP';
     public const VERSION = '0.3.0';
@@ -90,6 +93,27 @@ class Simfoni
     public static function getVerifySSL(): bool
     {
         return self::$verifySSL;
+    }
+
+    /**
+     * Set Webhook Signature
+     *
+     * @param  string  $webhookSignature
+     * @return void
+     */
+    public static function setWebhookSignature(string $webhookSignature): void
+    {
+        self::$webhookSignature = $webhookSignature;
+    }
+
+    /**
+     * Get Webhook Signature
+     *
+     * @return bool
+     */
+    public static function getWebhookSignature(): bool
+    {
+        return self::$webhookSignature;
     }
 
 }
