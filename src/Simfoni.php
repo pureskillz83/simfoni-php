@@ -68,7 +68,7 @@ class Simfoni
         $token = self::$token;
 
         if ($token === null) {
-            throw new MissingTokenException('Missing Bearer Token in Inspired Deck Configuration');
+            throw new MissingTokenException('Missing Bearer Token in Simfoni Configuration');
         }
 
         return $token;
