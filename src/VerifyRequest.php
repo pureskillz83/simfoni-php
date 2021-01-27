@@ -39,14 +39,4 @@ class VerifyRequest
         return in_array($requestHash, $signature, true);
     }
 
-    /**
-     * @param  string  $webhookSignature
-     * @param  string  $headerSignature
-     * @return VerifyRequest
-     */
-    public static function static(string $webhookSignature, string $headerSignature): VerifyRequest
-    {
-        return new self($webhookSignature, $headerSignature);
-    }
-
 }
