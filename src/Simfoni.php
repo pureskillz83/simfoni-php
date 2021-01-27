@@ -109,9 +109,9 @@ class Simfoni
     /**
      * Get Webhook Signature
      *
-     * @return bool
+     * @return string|null
      */
-    public static function getWebhookSignature(): bool
+    public static function getWebhookSignature(): ?string
     {
         return self::$webhookSignature;
     }
